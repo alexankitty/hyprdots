@@ -18,3 +18,6 @@ Vaxry gave me entirely too much power over what the compositor may do, and so I 
 If I screwed up somewhere, plus either A. slap me upside the head, or B. fix it and put in a pull request.
 
 Thank you and have a nice day. Or not. I'm not gonnna tell you what to do.
+
+## Why are you like this?
+I might clinically insane, iunno.
