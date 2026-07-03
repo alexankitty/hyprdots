@@ -12,6 +12,8 @@ Vaxry gave me entirely too much power over what the compositor may do, and so I 
 
 * Dispatch wrapper for compatibility with hl.bind and hl.dispatch such that they'll receive the requisite function as a closure that can be fully ran.
 
+* Dynamically assigns 5 workspaces per monitor. There are two wolves in me, one that wants chaos, and another that wants order.
+
 * My never-ending insanity, pls send help.
 
 ## Contribution
