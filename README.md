@@ -67,6 +67,8 @@ Vaxry gave me entirely too much power over what the compositor may do, and so I 
 
 * The hypr-darkwindow ruleset includes a table of classes to disable the chromakey on. Additionally, the chromakey may be toggled with SUPER+SHIFT+O
 
+* For browser transparency, I use waterfox with [natsumi-browser](https://github.com/greeeen-dev/natsumi-browser) and some additional tweaks from my [transparency-fox](https://github.com/alexankitty/transparency-fox/) repo.
+
 ## Contribution
 If I screwed up somewhere, please either A. slap me upside the head, or B. fix it and put in a pull request.
 
