@@ -20,7 +20,7 @@ Vaxry gave me entirely too much power over what the compositor may do, and so I 
 * wl-clipboard
 * gammastep
 * wayle
-* fctix5 (requires additional config, I excluded my stuff because I don't want to pigeonhole the user into my IME of choice)
+* fcitx5 (requires additional config, I excluded my stuff because I don't want to pigeonhole the user into my IME of choice)
 * matugen
 * awww
 
