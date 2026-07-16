@@ -1,0 +1,50 @@
+[general]
+font-sans = "Didact Gothic"
+
+[bar]
+rounding = "none"
+button-variant = "basic"
+button-label-size = 1.149999976158142
+button-label-weight = "bold"
+dropdown-freeze-label = false
+
+[styling]
+matugen-scheme = "fidelity"
+matugen-source-color = 0
+wallust-palette = "ansidark"
+wallust-backend = "full"
+wallust-colorspace = "lchansi"
+
+[styling.palette]
+bg = "#11111b"
+surface = "#181825"
+elevated = "#1e1e2e"
+fg = "#cdd6f4"
+fg-muted = "#bac2de"
+primary = "#b4befe"
+red = "#f38ba8"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+blue = "#74c7ec"
+
+[modules.cava]
+input = "pulse"
+
+[modules.clock]
+format = "%m/%d |  %H:%M"
+
+[modules.media]
+icon-type = "spinning-disc"
+
+[modules.notifications]
+popup-urgency-bar = "critical"
+
+[wallpaper]
+engine-enabled = true
+transition-type = "fade"
+cycling-same-image = true
+
+[[wallpaper.monitors]]
+name = "*"
+fit-mode = "fill"
+wallpaper = "/home/alexandra/Pictures/Kl38QP.jpg"

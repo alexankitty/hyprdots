@@ -39,8 +39,8 @@ if hl.plugin.darkwindow ~= nil then
         ["darkwindow:shade"] = hl.plugin.darkwindow.build_rule_effect({
             shader = "chromakey",
             args = {
-                bkg = { 0.1, 0.1, 0.1 },
-                similarity = 0.2,
+                bkg = { 0.09, 0.11, 0.14 },
+                similarity = 0.01,
                 amount = 0,
                 targetOpacity = 0.7
             }

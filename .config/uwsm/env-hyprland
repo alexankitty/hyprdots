@@ -1,0 +1,4 @@
+export XCURSOR_THEME=cakeos
+export XCURSOR_SIZE=32
+export HYPRCURSOR_THEME=CakeOS
+export HYPRCURSOR_SIZE=32

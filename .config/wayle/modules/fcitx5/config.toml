@@ -1,0 +1,9 @@
+[[modules.custom]]
+id = "fcitx5"
+mode   = "watch"
+format = "{{ languageBrief }}"
+hide-if-empty = true
+icon-name = "ld-keyboard-symbolic"
+icon-map = { "mozc" = "fcitx_mozc", "anthy" = "fcitx-anthy", "skk" = "fcitx-skk", "pinyin" = "fcitx-pinyin", "rime" = "fcitx-rime", "chewing" = "fcitx-chewing", "table" = "fcitx-table", "hangul" = "fcitx-hangul", "unikey" = "fcitx-unikey", "libthai" = "fcitx-libthai", "m17n" = "fcitx-m17n" }
+command = '$XDG_CONFIG_HOME/wayle/modules/fcitx5/dbusinfo.py'
+left-click = "fcitx5-remote -t"

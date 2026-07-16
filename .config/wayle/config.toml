@@ -1,0 +1,80 @@
+# Wayle configuration file
+imports = ["modules/fcitx5/config.toml"]
+
+[general]
+tearing-mode  = true
+
+[styling]
+theme-provider = "matugen"
+matugen-scheme = "rainbow"
+theming-monitor = "DP-2"
+matugen-source-color = 1
+rounding = "sm"
+
+[wallpaper]
+engine-enabled = false
+
+[bar]
+scale = 1
+location = "top"
+rounding = "sm"
+background-opacity = 0
+button-bg-opacity = 50
+button-rounding   = "sm"
+dropdown-autohide   = true
+
+[[bar.layout]]
+monitor = "DP-2"
+left = ["dashboard", "hyprland-workspaces", "window-title"]
+center = ["media"]
+right = [
+  "keybind-mode",
+  "custom-fcitx5",
+  "volume",
+  "network",
+  "bluetooth",
+  "systray",
+  "weather",
+  "clock",
+  "notifications",
+]
+
+[[bar.layout]]
+monitor = "*"
+left = ["dashboard", "hyprland-workspaces", "window-title"]
+center = []
+right = [
+  "keybind-mode",
+  "custom-fcitx5",
+  "weather",
+  "clock",
+]
+
+[modules.clock]
+format = "%m/%d | %H:%M"
+icon-show = true
+label-show = true
+
+[modules.hyprland-workspaces]
+display-mode = "none"
+active-indicator = "underline"
+monitor-specific = true
+app-icons-dedupe = true
+app-icons-show = true
+urgent-show = true
+urgent-mode = "application"
+
+[modules.weather]
+location = "Ogden"
+units = "imperial"
+
+[modules.systray]
+blacklist = ["Xwayland Video Bridge_pipewireToXProxy", "blueman", "nm-applet", "Fcitx"]
+
+[modules.keybind-mode]
+auto-hide   = true
+format   = "{{ mode | capitalize }}"
+
+[osd]
+position = "top"
+margin = 0
