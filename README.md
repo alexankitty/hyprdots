@@ -3,27 +3,35 @@
 # Alexankitty's hyprland dot files
 Vaxry gave me entirely too much power over what the compositor may do, and so I have taken to abusing it because I have problems.
 
-# Dependencies
+## Dependencies
+### Hotkeys
 * satty
 * grimblast
 * kitty (change it for whatever terminal you prefer)
 * walker (change it for whatever runner you prefer)
 * dolphin (change it for whatever file manager you prefer)
 * wlogout
-* wl-clipboard
 * hyprpicker
-* gammastep
 * wireplumber
 * playerctl
 * brightnessctl
-* matugen
 
-# Qt
-* qt5ct-kde / qt6ct-kde
+ ### Compositor / Shell
+* wl-clipboard
+* gammastep
+* wayle
+* fctix5 (requires additional config, I excluded my stuff because I don't want to pigeonhole the user into my IME of choice)
+
+### Styling
+* matugen
+* awww
+
+### Qt
+* qt5ct-kde / qt6ct-kde (Needs to be the KDE version as my matugen is setup to create a kcolorscheme which also fixes theming for KDE apps like dolphin)
 * breeze
 * breeze-icons
 
-# GTK
+### GTK
 * breeze-gtk-git
 
 ### OCR
