@@ -60,6 +60,10 @@ Vaxry gave me entirely too much power over what the compositor may do, and so I 
 
 * Uses patterns to stop loading configs related to plugins if they're not currently loaded in hyprland.
 
+* Assumes primary monitor is at 0,0
+
+* Utilizes auto-left, auto-right for my monitor setup (adjust yours accordingly)
+
 ## Additional Customizations
 * I use zsh with starship using a customized version of the catppuccin theme.
   
