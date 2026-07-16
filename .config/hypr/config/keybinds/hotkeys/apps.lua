@@ -9,4 +9,5 @@ hl.bind("SUPER + Period", App.Dsp.Exec("walker -m emojis"))
 hl.bind("CTRL+SHIFT+ALT + Delete", App.Dsp.Exec_Replace("wlogout -p layer-shell"))
 hl.bind("Print", App.Dsp.Exec_Once("grimblast --freeze save area - | satty -f -", "slurp")) -- Screen snip
 hl.bind("SHIFT + Print", App.Dsp.Exec_Once("grimblast --freeze save area - | wl-copy", "slurp"))
-hl.bind("SUPER+SHIFT + C", App.Dsp.Exec_Once("hyprpicker -a", "hyprpicker")) -- Pick color (Hex) >> clipboard
+hl.bind("SUPER+SHIFT + C", App.Dsp.Exec_Once("hyprpicker -a")) -- Pick color (Hex) >> clipboard
+hl.bind("SUPER + Print", App.Dsp.Exec_Once("$XDG_CONFIG_HOME/hypr/scripts/ocrcap.sh", "slurp"))
