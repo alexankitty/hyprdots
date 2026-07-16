@@ -1,1 +1,0 @@
-getent passwd "$USER" | awk -F: '{print $5}' | cut -d, -f1

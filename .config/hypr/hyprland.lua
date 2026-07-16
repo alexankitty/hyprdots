@@ -1,5 +1,6 @@
 -- Libraries
 require("lib/app-mgmt")
+require("lib/monitor")
 
 -- Folders
 local require_roots = {
