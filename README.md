@@ -16,13 +16,11 @@ Vaxry gave me entirely too much power over what the compositor may do, and so I 
 * playerctl
 * brightnessctl
 
- ### Compositor / Shell
+ ### Compositor / Shell / Styling
 * wl-clipboard
 * gammastep
 * wayle
 * fctix5 (requires additional config, I excluded my stuff because I don't want to pigeonhole the user into my IME of choice)
-
-### Styling
 * matugen
 * awww
 
@@ -66,6 +64,8 @@ Vaxry gave me entirely too much power over what the compositor may do, and so I 
 * I use zsh with starship using a customized version of the catppuccin theme.
   
 * For Zed I used a Catppuccin Blur theme
+
+* The hypr-darkwindow ruleset includes a table of classes to disable the chromakey on. Additionally, the chromakey may be toggled with SUPER+SHIFT+O
 
 ## Contribution
 If I screwed up somewhere, please either A. slap me upside the head, or B. fix it and put in a pull request.
