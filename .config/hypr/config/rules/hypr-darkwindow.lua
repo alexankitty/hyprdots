@@ -57,4 +57,10 @@ if hl.plugin.darkwindow ~= nil then
         match = { class = table.concat(chromakeyDisabledPattern, "|") },
         ["darkwindow:shade"] = "",
     })
+
+    -- Toggle shade on/off
+    hl.bind("SUPER+SHIFT+O", hl.plugin.darkwindow.dsp_shade({
+      shader = "chromakey",
+    }))
+
 end
