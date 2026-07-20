@@ -27,8 +27,34 @@ hl.gesture({
 })
 
 if hl.plugin.hyprgrass ~= nil then
-  hl.plugin.hyprgrass.bind("edge:r:l", hl.dsp.workspace("+1"))
-  hl.plugin.hyprgrass.bind("edge:l:r", hl.dsp.workspace("-1"))
-  hl.plugin.hyprgrass.bind("longpress:2", hl.dsp.window.move(), { mouse = true })
-  hl.plugin.hyprgrass.bind("longpress:3", hl.dsp.window.resize(), { mouse = true })
-end
+    hl.config({
+        plugin = {
+            hyprgrass = {
+
+                sensitivity = 4.0,
+                long_press_delay = 200,
+                resize_on_border_long_press = true,
+                edge_margin = 100,
+            }
+        }
+    })
+    hl.plugin.hyprgrass.bind {
+        pattern = {kind = "swipe", direction = "l", fingers = 3},
+        action = hl.dsp.focus({workspace = "+1"}),
+    }
+    hl.plugin.hyprgrass.bind {
+        pattern = {kind = "swipe", direction = "r", fingers = 3},
+        action = hl.dsp.focus({workspace = "-1"}),
+    }
+    -- longpress can trigger mouse binds:
+    hl.plugin.hyprgrass.bind {
+        pattern = {kind = "longpress", fingers = 2},
+        action = hl.dsp.window.drag(),
+        mouse = true,
+    }
+    hl.plugin.hyprgrass.bind {
+        pattern = {kind = "longpress", fingers = 3},
+        action = hl.dsp.window.resize(),
+        mouse = true,
+    }
+    end
