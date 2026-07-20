@@ -3,6 +3,14 @@
 # Alexankitty's hyprland dot files
 Vaxry gave me entirely too much power over what the compositor may do, and so I have taken to abusing it because I have problems.
 
+# Installation
+```sh
+git clone --recurse-submodules https://github.com/alexankitty/hyprdots
+```
+My dots use a separate [library project](https://github.com/alexankitty/hyprlibs), so be sure to clone and recurse submodules, else it won't work.
+
+Copy out the configs you want.
+
 ## Dependencies
 ### Hotkeys
 * satty
