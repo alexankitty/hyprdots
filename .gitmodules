@@ -1,0 +1,3 @@
+[submodule ".config/hypr/hyprlibs"]
+	path = .config/hypr/lib/hyprlibs
+	url = https://github.com/alexankitty/hyprlibs
