@@ -31,10 +31,10 @@ scrollbar {
   box-shadow:
     0 19px 38px rgba(0, 0, 0, 0.3),
     0 15px 12px rgba(0, 0, 0, 0.22);
-  background: @window_bg_color;
+  background: alpha(@window_bg_color, 0.7);
   padding: 20px;
   border-radius: 20px;
-  border: 1px solid @borders;
+  border: 0px solid @borders;
 }
 
 .preview-box,
