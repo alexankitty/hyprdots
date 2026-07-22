@@ -39,8 +39,8 @@ if hl.plugin.darkwindow ~= nil then
         ["darkwindow:shade"] = hl.plugin.darkwindow.build_rule_effect({
             shader = "chromakey",
             args = {
-                bkg = { 0.09, 0.11, 0.14 },
-                similarity = 0.01,
+                bkg = { 0.1, 0.1, 0.1 },
+                similarity = 0.1,
                 amount = 0,
                 targetOpacity = 0.7
             }
@@ -50,17 +50,17 @@ if hl.plugin.darkwindow ~= nil then
     local chromakeyDisabledPattern = {}
     for _, class in ipairs(chromakeyDisabledClasses) do
         table.insert(chromakeyDisabledPattern, "(" .. class .. ")")
-    end
+        end
 
-    hl.window_rule({
-        name = "disable-chromakey",
-        match = { class = table.concat(chromakeyDisabledPattern, "|") },
-        ["darkwindow:shade"] = "",
-    })
+        hl.window_rule({
+            name = "disable-chromakey",
+            match = { class = table.concat(chromakeyDisabledPattern, "|") },
+                       ["darkwindow:shade"] = "",
+        })
 
-    -- Toggle shade on/off
-    hl.bind("SUPER+SHIFT+O", hl.plugin.darkwindow.dsp_shade({
-      shader = "chromakey",
-    }))
+        -- Toggle shade on/off
+        hl.bind("SUPER+SHIFT+O", hl.plugin.darkwindow.dsp_shade({
+            shader = "chromakey",
+        }))
 
-end
+        end
