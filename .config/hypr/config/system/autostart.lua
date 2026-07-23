@@ -1,6 +1,5 @@
 hl.on("hyprland.start", function()
     -- UWSM Service runner
-    App.Runapp("pypr")
     App.Runapp("walker --gapplication-service")
     App.Runapp("/usr/bin/discord")
 

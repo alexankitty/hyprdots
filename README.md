@@ -46,7 +46,6 @@ Copy out the configs you want.
 
 ### Hyprland Plugins
 * hypr-darkwindow
-* pyprland
 * hyprgrass (if you have touchscreen)
 
 ## Features
