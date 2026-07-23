@@ -24,4 +24,4 @@ hl.bind("SUPER+SHIFT + G", hl.dsp.window.move({ out_of_group = true }))
 
 -- Stash Workspace
 hl.bind("SUPER+SHIFT + N", hl.dsp.workspace.toggle_special("stash")) -- toggles "stash" special workspace visibility
-hl.bind("SUPER + N", hl.dsp.exec_cmd("pypr toggle_special stash")) -- moves window to/from the "stash" workspace
+hl.bind("SUPER + N", Workspaces.dsp.toggle_special("stash")) -- moves window to/from the "stash" workspace
