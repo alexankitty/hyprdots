@@ -71,6 +71,8 @@ Copy out the configs you want.
 
 * Utilizes auto-left, auto-right for my monitor setup (adjust yours accordingly)
 
+* Native implementation of toggle_special from pyprland
+
 ## Additional Customizations
 * I use zsh with starship using a customized version of the catppuccin theme.
   
@@ -79,6 +81,8 @@ Copy out the configs you want.
 * The hypr-darkwindow ruleset includes a table of classes to disable the chromakey on. Additionally, the chromakey may be toggled with SUPER+SHIFT+O
 
 * For browser transparency, I use waterfox with [natsumi-browser](https://github.com/greeeen-dev/natsumi-browser) and some additional tweaks from my [transparency-fox](https://github.com/alexankitty/transparency-fox/) repo.
+
+* Wayle doesn't let you automatically set the wallpaper monitor agnostically, which is annoying for it being the basis of matugen. Make sure you set the wallpaper for all monitors you want in its config, or you may be able to use `wayle wallpaper set <path to image>
 
 ## Contribution
 If I screwed up somewhere, please either A. slap me upside the head, or B. fix it and put in a pull request.
