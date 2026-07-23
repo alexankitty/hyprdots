@@ -3,7 +3,7 @@ hl.config ({
         kb_layout = "us",
         numlock_by_default = true,
         repeat_delay = 250,
-        repeat_rate = 35,
+        repeat_rate = 50,
         special_fallthrough = true,
         follow_mouse = true,
         kb_options = "fkeys:basic_13-24,compose:ralt",
