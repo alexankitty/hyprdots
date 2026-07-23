@@ -82,7 +82,7 @@ Copy out the configs you want.
 
 * For browser transparency, I use waterfox with [natsumi-browser](https://github.com/greeeen-dev/natsumi-browser) and some additional tweaks from my [transparency-fox](https://github.com/alexankitty/transparency-fox/) repo.
 
-* Wayle doesn't let you automatically set the wallpaper monitor agnostically, which is annoying for it being the basis of matugen. Make sure you set the wallpaper for all monitors you want in its config, or you may be able to use `wayle wallpaper set <path to image>
+* Wayle doesn't let you automatically set the wallpaper monitor agnostically, which is annoying for it being the basis of matugen. Make sure you set the wallpaper for all monitors you want in its config, or you may be able to use `wayle wallpaper set <path to image>`
 
 ## Contribution
 If I screwed up somewhere, please either A. slap me upside the head, or B. fix it and put in a pull request.
