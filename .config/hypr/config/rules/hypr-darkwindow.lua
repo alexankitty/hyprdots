@@ -61,6 +61,9 @@ if hl.plugin.darkwindow ~= nil then
         -- Toggle shade on/off
         hl.bind("SUPER+SHIFT+O", hl.plugin.darkwindow.dsp_shade({
             shader = "chromakey",
+            args = {
+                targetOpacity = 1
+            }
         }))
 
         end
