@@ -1,8 +1,9 @@
 local workspaces_per_monitor = 5
 
 local function handle_monitor_event()
-Monitor.Assign_Workspaces(workspaces_per_monitor)
-Monitor.Write_Primary()
+    Monitor.Process_Disabled()
+    Monitor.Assign_Workspaces(workspaces_per_monitor)
+    Monitor.Write_Primary()
 end
 
 handle_monitor_event()
