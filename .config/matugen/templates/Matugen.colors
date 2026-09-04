@@ -76,7 +76,7 @@ ForegroundVisited={{colors.on_secondary_container.default.hex}}
 
 [Colors:Selection]
 BackgroundAlternate={{colors.surface_container_low.default.hex}}
-BackgroundNormal={{colors.primary_container.default.hex | auto_lightness: 35.0}}
+BackgroundNormal={{colors.primary_container.default.hex | auto_lightness: 30.0}}
 DecorationFocus={{colors.primary.default.hex}}
 DecorationHover={{colors.primary.default.hex}}
 ForegroundActive={{colors.on_primary_container.default.hex}}
@@ -105,7 +105,7 @@ ForegroundVisited={{colors.on_secondary_container.default.hex}}
 [Colors:View]
 BackgroundAlternate={{colors.surface_container.default.hex}}
 BackgroundNormal={{colors.background.default.hex}}
-DecorationFocus={{colors.primary_container.default.hex | auto_lightness: 35.0}}
+DecorationFocus={{colors.primary_container.default.hex | auto_lightness: 30.0}}
 DecorationHover={{colors.primary.default.hex}}
 ForegroundActive={{colors.primary.default.hex}}
 ForegroundInactive={{colors.on_surface_variant.default.hex}}
