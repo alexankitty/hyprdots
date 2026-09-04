@@ -3,9 +3,9 @@
 @define-color theme_text_color_breeze {{colors.on_background.default.hex}};
 @define-color theme_base_color_breeze {{colors.background.default.hex}};
 @define-color theme_view_hover_decoration_color_breeze {{colors.primary.default.hex}};
-@define-color theme_hovering_selected_bg_color_breeze {{colors.primary.default.hex}};
-@define-color theme_selected_bg_color_breeze {{colors.primary.default.hex}};
-@define-color theme_selected_fg_color_breeze {{colors.on_primary.default.hex}};
+@define-color theme_hovering_selected_bg_color_breeze alpha({{colors.primary.default.hex}}, 0.35);
+@define-color theme_selected_bg_color_breeze {{colors.primary_container.default.hex | auto_lightness: 12.0}};
+@define-color theme_selected_fg_color_breeze {{colors.on_primary_container.default.hex}};
 @define-color theme_view_active_decoration_color_breeze {{colors.primary.default.hex}};
 @define-color theme_button_background_normal_breeze {{colors.surface_container_high.default.hex}};
 @define-color theme_button_decoration_hover_breeze {{colors.primary.default.hex}};
@@ -19,8 +19,8 @@
 @define-color theme_unfocused_text_color_breeze {{colors.on_background.default.hex}};
 @define-color theme_unfocused_bg_color_breeze {{colors.surface_container.default.hex}};
 @define-color theme_unfocused_base_color_breeze {{colors.background.default.hex}};
-@define-color theme_unfocused_selected_bg_color_alt_breeze {{colors.primary.default.hex}};
-@define-color theme_unfocused_selected_bg_color_breeze {{colors.primary.default.hex}};
+@define-color theme_unfocused_selected_bg_color_alt_breeze {{colors.surface_variant.default.hex}};
+@define-color theme_unfocused_selected_bg_color_breeze {{colors.surface_variant.default.hex}};
 @define-color theme_unfocused_selected_fg_color_breeze {{colors.on_primary.default.hex}};
 @define-color theme_button_background_backdrop_breeze {{colors.surface_container_high.default.hex}};
 @define-color theme_button_decoration_hover_backdrop_breeze {{colors.primary.default.hex}};
@@ -34,8 +34,8 @@
 @define-color insensitive_base_fg_color_breeze {{colors.on_background.default.hex}};
 @define-color insensitive_bg_color_breeze {{colors.surface_container.default.hex}};
 @define-color insensitive_base_color_breeze {{colors.background.default.hex}};
-@define-color insensitive_selected_bg_color_breeze {{colors.primary.default.hex}};
-@define-color insensitive_selected_fg_color_breeze {{colors.on_primary.default.hex}};
+@define-color insensitive_selected_bg_color_breeze {{colors.primary_container.default.hex | auto_lightness: 12.0}};
+@define-color insensitive_selected_fg_color_breeze {{colors.on_primary_container.default.hex}};
 @define-color theme_button_background_insensitive_breeze {{colors.surface_container_high.default.hex}};
 @define-color theme_button_decoration_hover_insensitive_breeze {{colors.primary.default.hex}};
 @define-color theme_button_decoration_focus_insensitive_breeze {{colors.primary.default.hex}};
@@ -48,7 +48,7 @@
 @define-color theme_unfocused_view_text_color_breeze {{colors.on_background.default.hex}};
 @define-color insensitive_unfocused_bg_color_breeze {{colors.surface_container.default.hex}};
 @define-color theme_unfocused_view_bg_color_breeze {{colors.background.default.hex}};
-@define-color insensitive_unfocused_selected_bg_color_breeze {{colors.primary.default.hex}};
+@define-color insensitive_unfocused_selected_bg_color_breeze {{colors.surface_variant.default.hex}};
 @define-color insensitive_unfocused_selected_fg_color_breeze {{colors.on_primary.default.hex}};
 @define-color theme_button_background_backdrop_insensitive_breeze {{colors.surface_container_high.default.hex}};
 @define-color theme_button_decoration_hover_backdrop_insensitive_breeze {{colors.primary.default.hex}};
@@ -62,3 +62,6 @@
 @define-color link_visited_color_breeze {{colors.on_secondary_container.default.hex}};
 @define-color content_view_bg_breeze {{colors.background.default.hex}};
 @define-color theme_titlebar_background_light_breeze {{colors.surface_container.default.hex}};
+row.activatable.has-open-popup, row.activatable:hover {
+    background-color: @theme_hovering_selected_bg_color_breeze;
+}
