@@ -3,15 +3,16 @@ require("lib/app-mgmt")
 require("lib/monitor")
 require("lib/workspaces")
 require("lib/keys")
-toolkit = require("lib/detect-toolkit")
+Toolkit = require("lib/detect-toolkit")
+require("lib/detect-toolkit.tags").enable()
 
 -- Folders
 local require_roots = {
-    "config"
+    "config",
 }
 
-local info = debug.getinfo(1, 'S')
-local module_directory = string.match(info.source, '^@(.*)/')
+local info = debug.getinfo(1, "S")
+local module_directory = string.match(info.source, "^@(.*)/")
 
 Require_Files = function(folder)
     local i, t, popen = 0, {}, io.popen
