@@ -10,7 +10,7 @@ local chromakeyDisabledClasses = {
 -- Classes that always get chromakey, even if a toolkit is detected.
 -- Same syntax: ".*" at the end means prefix match, otherwise exact.
 local chromakeyAllowedClasses = {
-    "FFPWA-.*",   -- example placeholder, replace with your own
+    "FFPWA-.*", -- example placeholder, replace with your own
 }
 
 -- Toolkits that always get chromakey, even though a toolkit is detected.
@@ -23,85 +23,85 @@ local chromakeyAllowedToolkits = {
 
 -- Builds a matcher function from a list of exact / "prefix.*" entries
 local function make_class_matcher(entries)
-local exact, prefixes = {}, {}
-for _, entry in ipairs(entries) do
-    local prefix = entry:match("^(.*)%.%*$")
-    if prefix then
-        table.insert(prefixes, prefix)
+    local exact, prefixes = {}, {}
+    for _, entry in ipairs(entries) do
+        local prefix = entry:match("^(.*)%.%*$")
+        if prefix then
+            table.insert(prefixes, prefix)
         else
             exact[entry] = true
-            end
-            end
+        end
+    end
 
-            return function(class)
-            if not class then return false end
-                if exact[class] then return true end
-                    for _, prefix in ipairs(prefixes) do
-                        if class:sub(1, #prefix) == prefix then return true end
-                            end
-                            return false
-                            end
-                            end
+    return function(class)
+        if not class then return false end
+        if exact[class] then return true end
+        for _, prefix in ipairs(prefixes) do
+            if class:sub(1, #prefix) == prefix then return true end
+        end
+        return false
+    end
+end
 
-                            -- Builds a matcher from a list of toolkit names
-                            local function make_toolkit_matcher(entries)
-                            local set = {}
-                            for _, entry in ipairs(entries) do
-                                set[(entry:gsub("^toolkit_", ""))] = true
-                                end
+-- Builds a matcher from a list of toolkit names
+local function make_toolkit_matcher(entries)
+    local set = {}
+    for _, entry in ipairs(entries) do
+        set[(entry:gsub("^toolkit_", ""))] = true
+    end
 
-                                return function(tk, variant)
-                                if not tk then return false end
-                                    if set[tk] then return true end
-                                        return variant ~= nil and set[tk .. "-" .. variant] == true
-                                        end
-                                        end
+    return function(tk, variant)
+        if not tk then return false end
+        if set[tk] then return true end
+        return variant ~= nil and set[tk .. "-" .. variant] == true
+    end
+end
 
-                                        local class_disabled   = make_class_matcher(chromakeyDisabledClasses)
-                                        local class_allowed    = make_class_matcher(chromakeyAllowedClasses)
-                                        local toolkit_allowed  = make_toolkit_matcher(chromakeyAllowedToolkits)
+local class_disabled  = make_class_matcher(chromakeyDisabledClasses)
+local class_allowed   = make_class_matcher(chromakeyAllowedClasses)
+local toolkit_allowed = make_toolkit_matcher(chromakeyAllowedToolkits)
 
-                                        if hl.plugin.darkwindow ~= nil then
-                                            local chromakeyArgs = {
-                                                bkg = { 0.1, 0.1, 0.1 },
-                                                similarity = 0.2,
-                                                amount = 0,
-                                                targetOpacity = 0.7,
-                                            }
+if hl.plugin.darkwindow ~= nil then
+    local chromakeyArgs = {
+        bkg = { 0.1, 0.1, 0.1 },
+        similarity = 0.2,
+        amount = 0,
+        targetOpacity = 0.7,
+    }
 
-                                            hl.layer_rule({
-                                                name = "chroma-key notification",
-                                                match = { namespace = "wayle-notification-popup" },
-                                                ["darkwindow:shade"] = hl.plugin.darkwindow.build_rule_effect({
-                                                    shader = "chromakey",
-                                                    args = {
-                                                        bkg = { 0.1, 0.1, 0.1 },
-                                                        similarity = 0.1,
-                                                        amount = 0,
-                                                        targetOpacity = 0.7,
-                                                    },
-                                                }),
-                                            })
+    hl.layer_rule({
+        name = "chroma-key notification",
+        match = { namespace = "wayle-notification-popup" },
+        ["darkwindow:shade"] = hl.plugin.darkwindow.build_rule_effect({
+            shader = "chromakey",
+            args = {
+                bkg = { 0.1, 0.1, 0.1 },
+                similarity = 0.1,
+                amount = 0,
+                targetOpacity = 0.7,
+            },
+        }),
+    })
 
-                                            hl.on("window.open", function(w)
-                                            if not w then return end
-                                                if class_disabled(w.class) then return end
+    hl.on("window.open", function(w)
+        if not w then return end
+        if class_disabled(w.class) then return end
 
-                                                    -- Allow-listed classes and toolkits skip the "no toolkit" requirement
-                                                    if not class_allowed(w.class) then
-                                                        local tk, variant = toolkit.of(w)
-                                                        if tk ~= nil and not toolkit_allowed(tk, variant) then return end
-                                                            end
+        -- Allow-listed classes and toolkits skip the "no toolkit" requirement
+        if not class_allowed(w.class) then
+            local tk, variant = Toolkit.of(w)
+            if tk ~= nil and not toolkit_allowed(tk, variant) then return end
+        end
 
-                                                            hl.dispatch(hl.plugin.darkwindow.dsp_shade({
-                                                                shader = "chromakey",
-                                                                args = chromakeyArgs,
-                                                                window = w,
-                                                            }))
-                                                            end)
+        hl.dispatch(hl.plugin.darkwindow.dsp_shade({
+            shader = "chromakey",
+            args = chromakeyArgs,
+            window = w,
+        }))
+    end)
 
-                                            hl.bind("SUPER+SHIFT+O", hl.plugin.darkwindow.dsp_shade({
-                                                shader = "chromakey",
-                                                args = chromakeyArgs,
-                                            }))
-                                            end
+    hl.bind("SUPER+SHIFT+O", hl.plugin.darkwindow.dsp_shade({
+        shader = "chromakey",
+        args = chromakeyArgs,
+    }))
+end
