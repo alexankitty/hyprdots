@@ -7,6 +7,7 @@ hl.config ({
         special_fallthrough = true,
         follow_mouse = true,
         kb_options = "fkeys:basic_13-24,compose:ralt",
+        natural_scroll = false,
 
         touchpad = {
             natural_scroll = true,

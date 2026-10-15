@@ -9,7 +9,6 @@ hl.on("hyprland.start", function()
     App.Exec("hyprpm reload -n")
 
     -- Delayed executions
-    App.Runapp_Delayed("/usr/bin/controller-monitor", 10)
-    App.Runapp_Delayed("coolercontrol", 10)
+    App.Runapp_Delayed("coolercontrol", 20)
     App.Exec_Delayed('hyprctl dispatch \'hl.dsp.window.move({ workspace = "special:stash", window = "class:firebotv5", follow = false })\'', 10)
 end)
