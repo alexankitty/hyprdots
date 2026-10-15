@@ -34,11 +34,11 @@ Copy out the configs you want.
 
 ### Qt
 * qt5ct-kde / qt6ct-kde (Needs to be the KDE version as my matugen is setup to create a kcolorscheme which also fixes theming for KDE apps like dolphin)
-* breeze
+* [breeze-transparent](https://github.com/alexankitty/breeze-transparent)
 * breeze-icons
 
 ### GTK
-* breeze-gtk-git
+* [breeze-transparent-gtk](https://github.com/alexankitty/breeze-transparent)
 
 ### OCR
 * tesseract
